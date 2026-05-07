@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef Mina | Exelencia Culinaria</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-red: #800000;
+            --gold: #D4AF37;
+            --off-white: #fdfdfd;
+            --text-dark: #2c2c2c;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--off-white);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 10%;
+            background: white;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--dark-red);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 30px; }
+        nav ul li a { text-decoration: none; color: var(--text-dark); font-weight: 600; transition: 0.3s; }
+        nav ul li a:hover { color: var(--gold); }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;      /* Centers content vertically */
+            justify-content: center;   /* Centers content horizontally */
+            padding: 0 10%;            /* Keeps a safety margin on the sides */
+            
+            /* CRITICAL: Ensure the section takes up the full screen height */
+            min-height: calc(100vh - 80px); /* Adjusts for the height of your Nav */
+            
+            text-align: center;        /* Centers text and stars inside hero-content */
+        }
+
+        .hero-content {
+            flex: 0 1 auto;           /* Prevents it from stretching unnecessarily */
+            padding-right: 0;         /* Remove the right padding since we are centering now */
+            display: flex;
+            flex-direction: column;
+            align-items: center;      /* Ensures button and title group stay centered */
+        }
+
+        /* Title with Ornaments */
+        .hero-title {
+            display: flex;
+            align-items: center;
+            gap: 20px; 
+            font-family: 'Playfair Display', serif;
+            font-size: 5.5rem;
+            color: var(--dark-red);
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+
+        .ornament-left, .ornament-right {
+            width: 100px; /* Adjusted size to fit beside text */
+            flex-shrink: 0;
+        }
+
+        .ornament-left svg { transform: rotate(-45deg); transform-origin: center; }
+        .ornament-right svg { transform: rotate(45deg) scaleX(-1); transform-origin: center; }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 35px;
+            background-color: var(--dark-red);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid var(--dark-red);
+            transition: all 0.3s;
+            border-radius: 2px;
+            margin-top: 20px;
+        }
+
+        .cta-button:hover {
+            background-color: transparent;
+            color: var(--dark-red);
+        }
+
+        /* .hero-image img {
+            width: 100%;
+            max-width: 500px;
+            border: 10px solid white;
+            box-shadow: 20px 20px 0px var(--gold);
+            border-radius: 5px;
+        } */
+
+        footer {
+            text-align: center;
+            padding: 3rem;
+            background: #1a1a1a;
+            color: var(--gold);
+        }
+
+        .title-text-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Star styling */
+        .star-rating {
+            margin-top: 10px;
+            font-size: 2rem; /* Size of the stars */
+            color: var(--gold);
+            letter-spacing: 5px; /* Spacing between stars */
+            text-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+        }
+        /* Flags */
+        .language-switch {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .language-switch img {
+            width: 45px;
+            height: 45px;
+            object-fit: cover;
+            border-radius: 50%;
+            transition: transform 0.2s ease;
+        }
+
+        .language-switch a:hover {
+            transform: scale(1.15);
+        }
+
+        @media (max-width: 768px) {
+
+        /* NAVBAR */
+        nav {
+            flex-direction: column;
+            gap: 15px;
+            padding: 1rem 5%;
+        }
+
+        .nav-right {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .nav-links {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        /* HERO */
+        .hero {
+            padding: 40px 5%;
+            min-height: auto;
+        }
+
+        .hero-title {
+            flex-direction: column;
+            gap: 10px;
+            font-size: 3rem;
+        }
+
+        .ornament-left,
+        .ornament-right {
+            width: 60px;
+        }
+
+        .star-rating {
+            font-size: 1.4rem;
+        }
+
+        .cta-button {
+            padding: 12px 24px;
+            font-size: 0.95rem;
+        }
+
+        footer {
+            padding: 2rem 1rem;
+        }
+    }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Chef Mina</div>
+        <ul>
+            <li><a href="home.html" style="color: var(--gold);">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="language-switch">
+
+            <a href="home_es.html" title="Español">
+                <img src="ICONS/Bandera_de_España.svg.webp">
+            </a>
+            <a href="#" title="English">
+                <img src="ICONS/Flag_of_the_United_Kingdom.svg">
+            </a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <div class="ornament-left">
+                    <svg viewBox="0 0 120 200" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 60 10 Q 55 50 50 100 Q 48 150 50 190" stroke="var(--dark-red)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                        <ellipse cx="45" cy="40" rx="12" ry="18" fill="var(--gold)" transform="rotate(-35 35 40)"/>
+                        <ellipse cx="38" cy="70" rx="11" ry="16" fill="var(--dark-red)" transform="rotate(-40 28 70)"/>
+                        <ellipse cx="32" cy="100" rx="12" ry="17" fill="var(--gold)" transform="rotate(-35 32 100)"/>
+                        <ellipse cx="40" cy="130" rx="11" ry="16" fill="var(--dark-red)" transform="rotate(-40 30 130)"/>
+                        <ellipse cx="35" cy="160" rx="12" ry="18" fill="var(--gold)" transform="rotate(-35 35 160)"/>
+                        <ellipse cx="65" cy="55" rx="12" ry="18" fill="var(--gold)" transform="rotate(35 85 55)"/>
+                        <ellipse cx="62" cy="85" rx="11" ry="16" fill="var(--dark-red)" transform="rotate(40 92 85)"/>
+                        <ellipse cx="58" cy="115" rx="12" ry="17" fill="var(--gold)" transform="rotate(35 88 115)"/>
+                        <ellipse cx="60" cy="145" rx="11" ry="16" fill="var(--dark-red)" transform="rotate(40 90 145)"/>
+                        <ellipse cx="75" cy="170" rx="11" ry="16" fill="var(--dark-red)" transform="rotate(40 90 145)"/>
+                    </svg>
+                </div>
+                
+                <div class="title-text-group">
+                    <span>5-star<br>Culinary Service</span>
+                    <div class="star-rating">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                </div>
+
+                <div class="ornament-right">
+                    <svg viewBox="0 0 120 200" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 60 10 Q 55 50 50 100 Q 48 150 50 190" stroke="var(--dark-red)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                        <ellipse cx="45" cy="40" rx="12" ry="18" fill="var(--gold)" transform="rotate(-35 35 40)"/>
+                        <ellipse cx="38" cy="70" rx="11" ry="16" fill="var(--dark-red)" transform="rotate(-40 28 70)"/>
+                        <ellipse cx="32" cy="100" rx="12" ry="17" fill="var(--gold)" transform="rotate(-35 32 100)"/>
+                        <ellipse cx="40" cy="130" rx="11" ry="16" fill="var(--dark-red)" transform="rotate(-40 30 130)"/>
+                        <ellipse cx="35" cy="160" rx="12" ry="18" fill="var(--gold)" transform="rotate(-35 35 160)"/>
+                        <ellipse cx="65" cy="55" rx="12" ry="18" fill="var(--gold)" transform="rotate(35 85 55)"/>
+                        <ellipse cx="62" cy="85" rx="11" ry="16" fill="var(--dark-red)" transform="rotate(40 92 85)"/>
+                        <ellipse cx="58" cy="115" rx="12" ry="17" fill="var(--gold)" transform="rotate(35 88 115)"/>
+                        <ellipse cx="60" cy="145" rx="11" ry="16" fill="var(--dark-red)" transform="rotate(40 90 145)"/>
+                        <ellipse cx="75" cy="170" rx="11" ry="16" fill="var(--dark-red)" transform="rotate(40 90 145)"/>
+                    </svg>
+                </div>
+            </h1>
+            <a href="services.html" class="cta-button">View Services</a>
+        </div>
+        <!-- <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1577214459173-bb312e50a507?auto=format&fit=crop&w=800" alt="Chef Mina">
+        </div> -->
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Mina Website | Crafted with Taste</p>
+    </footer>
+
+</body>
+</html>

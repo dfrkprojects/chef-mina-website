@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mediterranean Leaf Ornaments Library</title>
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            background: linear-gradient(135deg, #fdfdfd 0%, #f5f0e8 100%);
+            padding: 60px 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #556B2F;
+            margin-bottom: 15px;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #D4AF37;
+            font-size: 1rem;
+            margin-bottom: 50px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .ornament-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .ornament-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 5px solid #D4AF37;
+        }
+
+        .ornament-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+
+        .ornament-preview {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            background: linear-gradient(135deg, #fdfdfd 0%, #f9f9f9 100%);
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid #efefef;
+        }
+
+        .ornament-preview svg {
+            max-width: 95%;
+            max-height: 95%;
+            filter: drop-shadow(0 2px 3px rgba(0,0,0,0.1));
+        }
+
+        .ornament-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: #556B2F;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .ornament-description {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .ornament-code {
+            background: #f5f0e8;
+            padding: 12px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.75rem;
+            color: #333;
+            overflow-x: auto;
+            border-left: 3px solid #6B8E23;
+            max-height: 150px;
+            overflow-y: auto;
+            line-height: 1.3;
+        }
+
+        code {
+            word-break: break-all;
+        }
+
+        .color-palette {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            font-size: 0.85rem;
+        }
+
+        .color-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .color-swatch {
+            width: 40px;
+            height: 40px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>🌿 Mediterranean Leaf Ornaments 🌿</h1>
+<div class="subtitle">Elegant botanical designs for Chef Mina</div>
+
+<div class="ornament-grid">
+
+    <!-- 1. Olive Branch -->
+    <div class="ornament-card">
+        <div class="ornament-title">Olive Branch</div>
+        <div class="ornament-description">Classic Mediterranean olive branch with alternating leaves. Perfect for a culinary theme.</div>
+        <div class="color-palette">
+            <div class="color-box">
+                <div class="color-swatch" style="background-color: #556B2F;"></div>
+                <span>#556B2F</span>
+            </div>
+            <div class="color-box">
+                <div class="color-swatch" style="background-color: #6B8E23;"></div>
+                <span>#6B8E23</span>
+            </div>
+        </div>
+        <div class="ornament-preview">
+            <svg viewBox="0 0 120 200" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 60 10 Q 55 50 50 100 Q 48 150 50 190" stroke="#556B2F" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                <ellipse cx="45" cy="40" rx="12" ry="18" fill="#6B8E23" transform="rotate(-35 35 40)"/>
+                <ellipse cx="38" cy="70" rx="11" ry="16" fill="#556B2F" transform="rotate(-40 28 70)"/>
+                <ellipse cx="32" cy="100" rx="12" ry="17" fill="#6B8E23" transform="rotate(-35 32 100)"/>
+                <ellipse cx="40" cy="130" rx="11" ry="16" fill="#556B2F" transform="rotate(-40 30 130)"/>
+                <ellipse cx="35" cy="160" rx="12" ry="18" fill="#6B8E23" transform="rotate(-35 35 160)"/>
+                <ellipse cx="65" cy="55" rx="12" ry="18" fill="#6B8E23" transform="rotate(35 85 55)"/>
+                <ellipse cx="62" cy="85" rx="11" ry="16" fill="#556B2F" transform="rotate(40 92 85)"/>
+                <ellipse cx="58" cy="115" rx="12" ry="17" fill="#6B8E23" transform="rotate(35 88 115)"/>
+                <ellipse cx="60" cy="145" rx="11" ry="16" fill="#556B2F" transform="rotate(40 90 145)"/>
+                <ellipse cx="75" cy="170" rx="11" ry="16" fill="#556B2F" transform="rotate(40 90 145)"/>
+            </svg>
+        </div>
+        <div class="ornament-code">
+&lt;ellipse cx="35" cy="40" rx="12" ry="18" 
+  fill="#6B8E23" transform="rotate(-35 35 40)"/&gt;
+        </div>
+    </div>
+
+    <!-- 2. Laurel Crown -->
+    <div class="ornament-card">
+        <div class="ornament-title">Laurel Crown</div>
+        <div class="ornament-description">Curved laurel wreath arrangement. Elegant for headers or achievements.</div>
+        <div class="color-palette">
+            <div class="color-box">
+                <div class="color-swatch" style="background-color: #2F5233;"></div>
+                <span>#2F5233</span>
+            </div>
+            <div class="color-box">
+                <div class="color-swatch" style="background-color: #558B55;"></div>
+                <span>#558B55</span>
+            </div>
+        </div>
+        <div class="ornament-preview">
+            <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 20 100 Q 60 40 100 30 Q 140 40 180 100" stroke="#2F5233" stroke-width="3" fill="none" stroke-linecap="round"/>
+                <ellipse cx="35" cy="85" rx="10" ry="15" fill="#558B55" transform="rotate(-20 35 85)"/>
+                <ellipse cx="50" cy="65" rx="11" ry="16" fill="#2F5233" transform="rotate(-10 50 65)"/>
+                <ellipse cx="70" cy="50" rx="10" ry="16" fill="#558B55" transform="rotate(5 70 50)"/>
+                <ellipse cx="90" cy="42" rx="11" ry="17" fill="#2F5233" transform="rotate(15 90 42)"/>
+                <ellipse cx="110" cy="42" rx="11" ry="17" fill="#558B55" transform="rotate(-15 110 42)"/>
+                <ellipse cx="130" cy="50" rx="10" ry="16" fill="#2F5233" transform="rotate(-5 130 50)"/>
+                <ellipse cx="150" cy="65" rx="11" ry="16" fill="#558B55" transform="rotate(10 150 65)"/>
+                <ellipse cx="165" cy="85" rx="10" ry="15" fill="#2F5233" transform="rotate(20 165 85)"/>
+            </svg>
+        </div>
+        <div class="ornament-code">
+&lt;path d="M 20 100 Q 60 40 100 30 Q 140 40 180 100" 
+  stroke="#2F5233" stroke-width="3" fill="none"/&gt;
+        </div>
+    </div>
+
+    <!-- 3. Grape Vine -->
+    <div class="ornament-card">
+        <div class="ornament-title">Grape Vine</div>
+        <div class="ornament-description">Winding vine with heart-shaped leaves and grape clusters. Great for wine-related content.</div>
+        <div class="color-palette">
+            <div class="color-box">
+                <div class="color-swatch" style="background-color: #4A4A3A;"></div>
+                <span>#4A4A3A</span>
+            </div>
+            <div class="color-box">
+                <div class="color-swatch" style="background-color: #8B7355;"></div>
+                <span>#8B7355</span>
+            </div>
+        </div>
+        <div class="ornament-preview">
+            <svg viewBox="0 0 140 200" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 30 10 Q 50 40 40 80 Q 30 120 50 160 Q 70 190 90 200" stroke="#4A4A3A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                <!-- Heart-shaped leaves -->
+                <path d="M 25 35 Q 15 25 10 35 Q 10 45 25 50 Q 40 45 40 35 Q 35 25 25 35" fill="#8B7355"/>
+                <path d="M 35 75 Q 22 62 15 75 Q 15 88 35 95 Q 55 88 55 75 Q 48 62 35 75" fill="#8B7355"/>
+                <path d="M 45 130 Q 30 120 22 130 Q 22 145 45 155 Q 68 145 68 130 Q 60 120 45 130" fill="#8B7355"/>
+                <!-- Grape clusters -->
+                <circle cx="20" cy="95" r="4" fill="#6B4E4E" opacity="0.7"/>
+                <circle cx="25" cy="100" r="4" fill="#6B4E4E" opacity="0.7"/>
+                <circle cx="15" cy="100" r="4" fill="#6B4E4E" opacity="0.7"/>
+            </svg>
+        </div>
+        <div class="ornament-code">
+&lt;path d="M 25 35 Q 15 25 10 35..." fill="#8B7355"/&gt;
+&lt;circle cx="20" cy="95" r="4" fill="#6B4E4E"/&gt;
+        </div>
+    </div>
+
+    <!-- 4. Bay Leaf Garland -->
+    <div class="ornament-card">
+        <div class="ornament-title">Bay Leaf Garland</div>
+        <div class="ornament-description">Straight line with upright bay leaves. Ideal for dividers or simple elegance.</div>
+        <div class="color-palette">
+            <div class="color-box">
+                <div class="color-swatch" style="background-color: #4A6741;"></div>
+                <span>#4A6741</span>
+            </div>
+            <div class="color-box">
+                <div class="color-swatch" style="background-color: #7BA653;"></div>
+                <span>#7BA653</span>
+            </div>
+        </div>
+        <div class="ornament-preview">
+            <svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 10 50 L 190 50" stroke="#4A6741" stroke-width="1.5" fill="none"/>
+                <ellipse cx="25" cy="50" rx="8" ry="14" fill="#7BA653" transform="rotate(-60 25 50)"/>
+                <ellipse cx="45" cy="50" rx="8" ry="14" fill="#4A6741" transform="rotate(60 45 50)"/>
+                <ellipse cx="65" cy="50" rx="8" ry="14" fill="#7BA653" transform="rotate(-60 65 50)"/>
+                <ellipse cx="85" cy="50" rx="8" ry="14" fill="#4A6741" transform="rotate(60 85 50)"/>
+                <ellipse cx="105" cy="50" rx="8" ry="14" fill="#7BA653" transform="rotate(-60 105 50)"/>
+                <ellipse cx="125" cy="50" rx="8" ry="14" fill="#4A6741" transform="rotate(60 125 50)"/>
+                <ellipse cx="145" cy="50" rx="8" ry="14" fill="#7BA653" transform="rotate(-60 145 50)"/>
+                <ellipse cx="165" cy="50" rx="8" ry="14" fill="#4A6741" transform="rotate(60 165 50)"/>
+            </svg>
+        </div>
+        <div class="ornament-code">
+&lt;path d="M 10 50 L 190 50" stroke="#4A6741"/&gt;
+&lt;ellipse rx="8" ry="14" fill="#7BA653"/&gt;
+        </div>
+    </div>
+
+    <!-- 5. Rosemary Sprig -->
+    <div class="ornament-card">
+        <div class="ornament-title">Rosemary Sprig</div>
+        <div class="ornament-description">Thin, delicate sprigs with tiny needle-like leaves. Perfect for minimalist designs.</div>
+        <div class="color-palette">
+            <div class="color-box">
+                <div class="color-swatch" style="background-color: #466651;"></div>
+                <span>#466651</span>
+            </div>
+            <div class="color-box">
+                <div class="color-swatch" style="background-color: #A8BF9F;"></div>
+                <span>#A8BF9F</span>
+            </div>
+        </div>
+        <div class="ornament-preview">
+            <svg viewBox="0 0 100 200" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 50 10 L 50 190" stroke="#466651" stroke-width="1.5" fill="none"/>
+                <line x1="50" y1="25" x2="40" y2="20" stroke="#A8BF9F" stroke-width="1.5"/>
+                <line x1="50" y1="25" x2="60" y2="20" stroke="#A8BF9F" stroke-width="1.5"/>
+                <line x1="50" y1="45" x2="38" y2="38" stroke="#466651" stroke-width="1.5"/>
+                <line x1="50" y1="45" x2="62" y2="38" stroke="#466651" stroke-width="1.5"/>
+                <line x1="50" y1="65" x2="40" y2="58" stroke="#A8BF9F" stroke-width="1.5"/>
+                <line x1="50" y1="65" x2="60" y2="58" stroke="#A8BF9F" stroke-width="1.5"/>
+                <line x1="50" y1="85" x2="37" y2="77" stroke="#466651" stroke-width="1.5"/>
+                <line x1="50" y1="85" x2="63" y2="77" stroke="#466651" stroke-width="1.5"/>
+                <line x1="50" y1="105" x2="40" y2="97" stroke="#A8BF9F" stroke-width="1.5"/>
+                <line x1="50" y1="105" x2="60" y2="97" stroke="#A8BF9F" stroke-width="1.5"/>
+                <line x1="50" y1="125" x2="38" y2="116" stroke="#466651" stroke-width="1.5"/>
+                <line x1="50" y1="125" x2="62" y2="116" stroke="#466651" stroke-width="1.5"/>
+                <line x1="50" y1="145" x2="40" y2="137" stroke="#A8BF9F" stroke-width="1.5"/>
+                <line x1="50" y1="145" x2="60" y2="137" stroke="#A8BF9F" stroke-width="1.5"/>
+                <line x1="50" y1="165" x2="37" y2="157" stroke="#466651" stroke-width="1.5"/>
+                <line x1="50" y1="165" x2="63" y2="157" stroke="#466651" stroke-width="1.5"/>
+            </svg>
+        </div>
+        <div class="ornament-code">
+&lt;path d="M 50 10 L 50 190" stroke="#466651"/&gt;
+&lt;line x1="50" y1="25" x2="40" y2="20"/&gt;
+        </div>
+    </div>
+
+    <!-- 6. Ivy Vine -->
+    <div class="ornament-card">
+        <div class="ornament-title">Ivy Vine</div>
+        <div class="ornament-description">Curved vine with rounded, overlapping leaves. Very natural and organic feel.</div>
+        <div class="color-palette">
+            <div class="color-box">
+                <div class="color-swatch" style="background-color: #3D5A3D;"></div>
+                <span>#3D5A3D</span>
+            </div>
+            <div class="color-box">
+                <div class="color-swatch" style="background-color: #6B8E6B;"></div>
+                <span>#6B8E6B</span>
+            </div>
+        </div>
+        <div class="ornament-preview">
+            <svg viewBox="0 0 150 180" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 20 160 Q 40 120 60 80 Q 80 40 130 10" stroke="#3D5A3D" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                <circle cx="25" cy="145" r="12" fill="#6B8E6B" opacity="0.8"/>
+                <circle cx="45" cy="110" r="13" fill="#3D5A3D" opacity="0.8"/>
+                <circle cx="65" cy="75" r="12" fill="#6B8E6B" opacity="0.8"/>
+                <circle cx="85" cy="45" r="13" fill="#3D5A3D" opacity="0.8"/>
+                <circle cx="105" cy="25" r="12" fill="#6B8E6B" opacity="0.8"/>
+                <!-- Overlapping leaf effect -->
+                <circle cx="35" cy="130" r="11" fill="#6B8E6B" opacity="0.6"/>
+                <circle cx="75" cy="65" r="11" fill="#3D5A3D" opacity="0.6"/>
+            </svg>
+        </div>
+        <div class="ornament-code">
+&lt;path d="M 20 160 Q 40 120 60 80..." stroke="#3D5A3D"/&gt;
+&lt;circle r="12" fill="#6B8E6B" opacity="0.8"/&gt;
+        </div>
+    </div>
+
+</div>
+
+<div style="background: white; padding: 40px; border-radius: 12px; border-left: 5px solid #D4AF37;">
+    <h2 style="color: #556B2F; font-family: 'Playfair Display', serif; margin-bottom: 20px;">How to Use in Your HTML</h2>
+    
+    <p style="font-family: 'Poppins', sans-serif; color: #666; margin-bottom: 20px; line-height: 1.7;">
+        Copy any ornament SVG code above and paste it into your HTML. Here's how to integrate it into the title:
+    </p>
+    
+    <div style="background: #f5f0e8; padding: 20px; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace; font-size: 0.85rem; line-height: 1.6; color: #333;">
+&lt;h1 class="hero-title"&gt;<br>
+&nbsp;&nbsp;&lt;span class="ornament left"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;svg viewBox="0 0 120 200"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Paste leaf ornament SVG code here --&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/svg&gt;<br>
+&nbsp;&nbsp;&lt;/span&gt;<br>
+&nbsp;&nbsp;Servicio de cinco estrellas<br>
+&nbsp;&nbsp;&lt;span class="ornament right"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;svg viewBox="0 0 120 200"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Another ornament here --&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/svg&gt;<br>
+&nbsp;&nbsp;&lt;/span&gt;<br>
+&lt;/h1&gt;
+    </div>
+
+    <h3 style="color: #556B2F; font-family: 'Playfair Display', serif; margin-top: 30px; margin-bottom: 15px;">Tips for Best Results:</h3>
+    <ul style="font-family: 'Poppins', sans-serif; color: #666; line-height: 1.8; margin-left: 20px;">
+        <li><strong>Colors:</strong> Use greens and earth tones. The palettes above work together!</li>
+        <li><strong>Width:</strong> Keep ornaments 140-180px for balance with large titles.</li>
+        <li><strong>Mix &amp; Match:</strong> Use different ornaments on left and right for visual interest.</li>
+        <li><strong>Opacity:</strong> Add opacity="0.7" to ornament SVG for subtle, elegant effect.</li>
+        <li><strong>Scaling:</strong> Adjust viewBox to make designs wider or taller as needed.</li>
+    </ul>
+</div>
+
+</body>
+</html>

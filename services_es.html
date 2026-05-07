@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef Mina | Exelencia Culinaria</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-red: #800000;
+            --gold: #D4AF37;
+            --off-white: #fdfdfd;
+            --text-dark: #2c2c2c;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--off-white);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 10%;
+            background: white;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--dark-red);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 30px; }
+        nav ul li a { text-decoration: none; color: var(--text-dark); font-weight: 600; transition: 0.3s; }
+        nav ul li a:hover { color: var(--gold); }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;      /* Centers content vertically */
+            justify-content: center;   /* Centers content horizontally */
+            padding: 0 10%;            /* Keeps a safety margin on the sides */
+            
+            /* CRITICAL: Ensure the section takes up the full screen height */
+            min-height: calc(100vh - 80px); /* Adjusts for the height of your Nav */
+            
+            text-align: center;        /* Centers text and stars inside hero-content */
+        }
+
+        .hero-content {
+            flex: 0 1 auto;           /* Prevents it from stretching unnecessarily */
+            padding-right: 0;         /* Remove the right padding since we are centering now */
+            display: flex;
+            flex-direction: column;
+            align-items: center;      /* Ensures button and title group stay centered */
+        }
+
+        /* Title with Ornaments */
+        .hero-title {
+            display: flex;
+            align-items: center;
+            gap: 20px; 
+            font-family: 'Playfair Display', serif;
+            font-size: 5.5rem;
+            color: var(--dark-red);
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            color: var(--dark-red);
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .ornament-left, .ornament-right {
+            width: 100px; /* Adjusted size to fit beside text */
+            flex-shrink: 0;
+        }
+
+        .ornament-left svg { transform: rotate(-45deg); transform-origin: center; }
+        .ornament-right svg { transform: rotate(45deg) scaleX(-1); transform-origin: center; }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 35px;
+            background-color: var(--dark-red);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid var(--dark-red);
+            transition: all 0.3s;
+            border-radius: 2px;
+            margin-top: 20px;
+        }
+
+        .cta-button:hover {
+            background-color: transparent;
+            color: var(--dark-red);
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 500px;
+            border: 10px solid white;
+            box-shadow: 20px 20px 0px var(--gold);
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem;
+            background: #1a1a1a;
+            color: var(--gold);
+        }
+
+        .title-text-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Star styling */
+        .star-rating {
+            margin-top: 10px;
+            font-size: 2rem; /* Size of the stars */
+            color: var(--gold);
+            letter-spacing: 5px; /* Spacing between stars */
+            text-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+        }
+        /* Flags */
+        .language-switch {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .language-switch img {
+            width: 45px;
+            height: 45px;
+            object-fit: cover;
+            border-radius: 50%;
+            transition: transform 0.2s ease;
+        }
+
+        .language-switch a:hover {
+            transform: scale(1.15);
+        }
+                .hero-image {
+            flex: 1;
+            text-align: right;
+            position: relative;
+
+            width: 500px;   /* fixed width */
+            height: 500px;  /* fixed height */
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* crops image to fit nicely */
+            
+            border: 10px solid white;
+            box-shadow: 20px 20px 0px var(--gold);
+            border-radius: 5px;
+            transition: opacity 0.8s ease-in-out;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem;
+            background: #1a1a1a;
+            color: var(--gold);
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+
+        /* NAVBAR */
+        nav {
+            flex-direction: column;
+            gap: 15px;
+            padding: 1rem 5%;
+        }
+
+        .nav-right {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .nav-links {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        /* HERO */
+        .hero {
+            padding: 40px 5%;
+            min-height: auto;
+        }
+
+        .hero-title {
+            flex-direction: column;
+            gap: 10px;
+            font-size: 3rem;
+        }
+
+        .ornament-left,
+        .ornament-right {
+            width: 60px;
+        }
+
+        .star-rating {
+            font-size: 1.4rem;
+        }
+
+        .cta-button {
+            padding: 12px 24px;
+            font-size: 0.95rem;
+        }
+
+        footer {
+            padding: 2rem 1rem;
+        }
+        .hero {
+            padding: 40px 5%;
+            min-height: auto;
+            
+            /* ADD THESE TWO LINES */
+            flex-direction: column; 
+            gap: 40px; /* Adds space between text and image */
+        }
+
+        .hero-image {
+            /* Ensure the image container resets its size for mobile */
+            width: 100%;
+            max-width: 400px; /* Optional: prevents it from being too big on mobile */
+            height: auto;
+            text-align: center; /* Centers the image */
+        }
+    }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Chef Mina</div>
+        <ul>
+            <li><a href="home_es.html">Página Principal</a></li>
+            <li><a href="about_es.html">Conóceme</a></li>
+            <li><a href="services_es.html" style="color: var(--gold);">Servicios</a></li>
+            <li><a href="contact_es.html">Contacto</a></li>
+        </ul>
+        <div class="language-switch">
+
+            <a href="#" title="Español">
+                <img src="ICONS/Bandera_de_España.svg.webp">
+            </a>
+            <a href="services.html" title="English">
+                <img src="ICONS/Flag_of_the_United_Kingdom.svg">
+            </a>
+        </div>
+    </nav>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Servicios de 5 estrellas</h1>
+            <h3>Servicios a domicilio, yate privado y eventos</h3>
+            <p>Chef con experiencia en artes culinarias internacionales devota en otorgar una experiencia única.</p>
+        </div>
+        <div class="hero-image">
+            <img id="roulette" src="PICTURES/Carne.jpeg" alt="Chef Mina Cook">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Mina Website | Crafted with Taste</p>
+    </footer>
+<script>
+    const images = [
+        "PICTURES/albondigas.jpeg",
+        "PICTURES/arroz con pollo.jpeg",
+        "PICTURES/carne 2.jpeg",
+        "PICTURES/ensalada 2.jpeg",
+        "PICTURES/pollo.jpeg",
+        "PICTURES/tarta de huevo.jpeg"
+    ];
+
+    let index = 0;
+    const imgElement = document.getElementById("roulette");
+
+    setInterval(() => {
+        imgElement.style.opacity = 0;
+
+        setTimeout(() => {
+            index = (index + 1) % images.length;
+            imgElement.src = images[index];
+            imgElement.style.opacity = 1;
+        }, 400);
+    }, 3000);
+</script>
+</body>
+</html>

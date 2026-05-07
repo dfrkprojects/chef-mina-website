@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef Mina | Culinary Excelence</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-red: #800000;
+            --gold: #D4AF37;
+            --off-white: #fdfdfd;
+            --text-dark: #2c2c2c;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--off-white);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 10%;
+            background: white;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--dark-red);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 30px; }
+        nav ul li a { text-decoration: none; color: var(--text-dark); font-weight: 600; transition: 0.3s; }
+        nav ul li a:hover { color: var(--gold); }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;      /* Centers content vertically */
+            justify-content: center;   /* Centers content horizontally */
+            padding: 0 10%;            /* Keeps a safety margin on the sides */
+            
+            /* CRITICAL: Ensure the section takes up the full screen height */
+            min-height: calc(100vh - 80px); /* Adjusts for the height of your Nav */
+            
+            text-align: center;        /* Centers text and stars inside hero-content */
+        }
+
+        .hero-content {
+            flex: 0 1 auto;           /* Prevents it from stretching unnecessarily */
+            padding-right: 0;         /* Remove the right padding since we are centering now */
+            display: flex;
+            flex-direction: column;
+            align-items: center;      /* Ensures button and title group stay centered */
+        }
+
+        /* Title with Ornaments */
+        .hero-title {
+            display: flex;
+            align-items: center;
+            gap: 20px; 
+            font-family: 'Playfair Display', serif;
+            font-size: 5.5rem;
+            color: var(--dark-red);
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            color: var(--dark-red);
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .ornament-left, .ornament-right {
+            width: 100px; /* Adjusted size to fit beside text */
+            flex-shrink: 0;
+        }
+
+        .ornament-left svg { transform: rotate(-45deg); transform-origin: center; }
+        .ornament-right svg { transform: rotate(45deg) scaleX(-1); transform-origin: center; }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 35px;
+            background-color: var(--dark-red);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid var(--dark-red);
+            transition: all 0.3s;
+            border-radius: 2px;
+            margin-top: 20px;
+        }
+
+        .cta-button:hover {
+            background-color: transparent;
+            color: var(--dark-red);
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 500px;
+            border: 10px solid white;
+            box-shadow: 20px 20px 0px var(--gold);
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem;
+            background: #1a1a1a;
+            color: var(--gold);
+        }
+
+        .title-text-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Star styling */
+        .star-rating {
+            margin-top: 10px;
+            font-size: 2rem; /* Size of the stars */
+            color: var(--gold);
+            letter-spacing: 5px; /* Spacing between stars */
+            text-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+        }
+        /* Flags */
+        .language-switch {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .language-switch img {
+            width: 45px;
+            height: 45px;
+            object-fit: cover;
+            border-radius: 50%;
+            transition: transform 0.2s ease;
+        }
+
+        .language-switch a:hover {
+            transform: scale(1.15);
+        }
+
+        @media (max-width: 768px) {
+
+        /* NAVBAR */
+        nav {
+            flex-direction: column;
+            gap: 15px;
+            padding: 1rem 5%;
+        }
+
+        .nav-right {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .nav-links {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        /* HERO */
+        .hero {
+            padding: 40px 5%;
+            min-height: auto;
+        }
+
+        .hero-title {
+            flex-direction: column;
+            gap: 10px;
+            font-size: 3rem;
+        }
+
+        .ornament-left,
+        .ornament-right {
+            width: 60px;
+        }
+
+        .star-rating {
+            font-size: 1.4rem;
+        }
+
+        .cta-button {
+            padding: 12px 24px;
+            font-size: 0.95rem;
+        }
+
+        footer {
+            padding: 2rem 1rem;
+        }
+                .hero {
+            padding: 40px 5%;
+            min-height: auto;
+            
+            /* ADD THESE TWO LINES */
+            flex-direction: column; 
+            gap: 40px; /* Adds space between text and image */
+        }
+
+        .hero-image {
+            /* Ensure the image container resets its size for mobile */
+            width: 100%;
+            max-width: 400px; /* Optional: prevents it from being too big on mobile */
+            height: auto;
+            text-align: center; /* Centers the image */
+        }
+    }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Chef Mina</div>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="#" style="color: var(--gold);">Contact</a></li>
+        </ul>
+        <div class="language-switch">
+
+            <a href="contact_es.html" title="Español">
+                <img src="ICONS/Bandera_de_España.svg.webp">
+            </a>
+            <a href="#" title="English">
+                <img src="ICONS/Flag_of_the_United_Kingdom.svg">
+            </a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Contact<br></h1>
+            <p class="phone-info"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+                </svg>
+                +507 6474-6236
+            </p>
+            <p class="email-info"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
+                <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z"/>
+                <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648m-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
+                </svg>
+                minacaballero897@gmail.com
+            </p> 
+
+            <a href="services.html" class="cta-button">View Services</a>
+        </div>
+        <div class="hero-image">
+            <img src="PICTURES/Ensalada.jpeg" alt="Chef Mina">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Mina Website | Crafted with Taste</p>
+    </footer>
+
+</body>
+</html>

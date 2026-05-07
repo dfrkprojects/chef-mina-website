@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef Mina | Excelencia Culinaria</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-red: #800000;
+            --gold: #D4AF37;
+            --olive: #556B2F;
+            --light-olive: #6B8E23;
+            --off-white: #fdfdfd;
+            --text-dark: #2c2c2c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--off-white);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 10%;
+            background: white;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--dark-red);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5rem 10%;
+            min-height: 80vh;
+        }
+
+        .hero-content {
+            flex: 1;
+            padding-right: 50px;
+        }
+
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            color: var(--dark-red);
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 35px;
+            background-color: var(--dark-red);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid var(--dark-red);
+            transition: all 0.3s;
+            border-radius: 2px;
+        }
+
+        .cta-button:hover {
+            background-color: transparent;
+            color: var(--dark-red);
+            border-color: var(--dark-red);
+        }
+
+        .hero-image {
+            flex: 1;
+            text-align: right;
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 500px;
+            border: 10px solid white;
+            box-shadow: 20px 20px 0px var(--gold);
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem;
+            background: #1a1a1a;
+            color: var(--gold);
+            margin-top: 50px;
+        }
+
+        .hero-title {
+            position: relative;
+            font-family: 'Playfair Display', serif;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .ornament {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 180px;
+            opacity: 0.9;
+        }
+
+        .ornament svg {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+        }
+
+        .ornament.left {
+            left: -220px;
+        }
+
+        .ornament.right {
+            right: -220px;
+            transform: translateY(-50%) scaleX(-1);
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Chef Mina</div>
+        <ul>
+            <li><a href="home.html" style="color: var(--gold);">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="ornament left">
+                    <!-- Mediterranean Olive Branch Left -->
+                    <svg viewBox="0 0 120 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Main branch -->
+                        <path d="M 60 10 Q 55 50 50 100 Q 48 150 50 190" 
+                              stroke="#556B2F" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                        
+                        <!-- Left side leaves -->
+                        <ellipse cx="35" cy="40" rx="12" ry="18" fill="#6B8E23" transform="rotate(-35 35 40)"/>
+                        <ellipse cx="28" cy="70" rx="11" ry="16" fill="#556B2F" transform="rotate(-40 28 70)"/>
+                        <ellipse cx="32" cy="100" rx="12" ry="17" fill="#6B8E23" transform="rotate(-35 32 100)"/>
+                        <ellipse cx="30" cy="130" rx="11" ry="16" fill="#556B2F" transform="rotate(-40 30 130)"/>
+                        <ellipse cx="35" cy="160" rx="12" ry="18" fill="#6B8E23" transform="rotate(-35 35 160)"/>
+                        
+                        <!-- Right side leaves -->
+                        <ellipse cx="85" cy="55" rx="12" ry="18" fill="#6B8E23" transform="rotate(35 85 55)"/>
+                        <ellipse cx="92" cy="85" rx="11" ry="16" fill="#556B2F" transform="rotate(40 92 85)"/>
+                        <ellipse cx="88" cy="115" rx="12" ry="17" fill="#6B8E23" transform="rotate(35 88 115)"/>
+                        <ellipse cx="90" cy="145" rx="11" ry="16" fill="#556B2F" transform="rotate(40 90 145)"/>
+                        
+                        <!-- Leaf veins for detail -->
+                        <path d="M 35 32 Q 35 40 35 48" stroke="#8FBC8F" stroke-width="0.8" opacity="0.5" fill="none"/>
+                        <path d="M 85 47 Q 85 55 85 63" stroke="#8FBC8F" stroke-width="0.8" opacity="0.5" fill="none"/>
+                    </svg>
+                </span>
+
+                Servicio de cinco estrellas
+
+                <span class="ornament right">
+                    <!-- Mediterranean Laurel Branch Right (mirrored) -->
+                    <svg viewBox="0 0 120 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Main branch -->
+                        <path d="M 60 10 Q 55 50 50 100 Q 48 150 50 190" 
+                              stroke="#556B2F" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                        
+                        <!-- Left side leaves -->
+                        <ellipse cx="35" cy="40" rx="12" ry="18" fill="#6B8E23" transform="rotate(-35 35 40)"/>
+                        <ellipse cx="28" cy="70" rx="11" ry="16" fill="#556B2F" transform="rotate(-40 28 70)"/>
+                        <ellipse cx="32" cy="100" rx="12" ry="17" fill="#6B8E23" transform="rotate(-35 32 100)"/>
+                        <ellipse cx="30" cy="130" rx="11" ry="16" fill="#556B2F" transform="rotate(-40 30 130)"/>
+                        <ellipse cx="35" cy="160" rx="12" ry="18" fill="#6B8E23" transform="rotate(-35 35 160)"/>
+                        
+                        <!-- Right side leaves -->
+                        <ellipse cx="85" cy="55" rx="12" ry="18" fill="#6B8E23" transform="rotate(35 85 55)"/>
+                        <ellipse cx="92" cy="85" rx="11" ry="16" fill="#556B2F" transform="rotate(40 92 85)"/>
+                        <ellipse cx="88" cy="115" rx="12" ry="17" fill="#6B8E23" transform="rotate(35 88 115)"/>
+                        <ellipse cx="90" cy="145" rx="11" ry="16" fill="#556B2F" transform="rotate(40 90 145)"/>
+                        
+                        <!-- Leaf veins for detail -->
+                        <path d="M 35 32 Q 35 40 35 48" stroke="#8FBC8F" stroke-width="0.8" opacity="0.5" fill="none"/>
+                        <path d="M 85 47 Q 85 55 85 63" stroke="#8FBC8F" stroke-width="0.8" opacity="0.5" fill="none"/>
+                    </svg>
+                </span>
+            </h1>
+            <a href="services.html" class="cta-button">Ver servicios</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1577214459173-bb312e50a507?auto=format&fit=crop&w=800" alt="Chef Mina Cook">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Mina Website | Crafted with Taste</p>
+    </footer>
+
+</body>
+</html>
